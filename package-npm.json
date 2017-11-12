@@ -1,0 +1,19 @@
+{
+    "name": "ngbook-kits",
+    "version": "0.0.4",
+    "description": "ngbook相关示例代码",
+    "main": "index.js",
+    "scripts": {
+    },
+    "keywords": [
+        "ngbook",
+        "angular",
+        "ng5",
+        "component"
+    ],
+    "devDependencies": {
+        "rxjs": "^5.5.2"
+    },
+    "author": "ngbook",
+    "license": "ISC"
+}

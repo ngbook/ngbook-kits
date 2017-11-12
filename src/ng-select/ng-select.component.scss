@@ -1,0 +1,57 @@
+:host {
+    .ng-select {
+        display: inline-block;
+    }
+    ng-button {
+        display: inline-block;
+        ::ng-deep .ng-button { // 定义button的样式
+            padding-left: 10px;
+            padding-right: 28px;
+        }
+        .txt {
+            padding: 0 5px;
+        }
+        .iconfont {
+            font-size: 12px;
+            color: #999;
+            margin-right: -18px;
+            float: right;
+        }
+    }
+    .choices {
+        position: relative;
+        ul.items {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+            border-radius: 4px;
+            display: inline-block;
+            border: 1px #ccc solid;
+            box-shadow: -2px 3px 10px #ccc;
+            z-index: 999;
+            font-size: 12px;
+            min-width: 100%;
+            max-height: 140px;
+            overflow: auto;
+            li.item {
+                padding: 5px 10px;
+                list-style: none;
+                cursor: pointer;
+                line-height: 20px;
+                text-align: center;
+                word-break: keep-all;
+                &.active {
+                    font-weight: 900;
+                    background-color: rgba(16, 142, 233, .1);
+                }
+                &:hover {
+                    background-color: rgba(16, 142, 233, .5);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
