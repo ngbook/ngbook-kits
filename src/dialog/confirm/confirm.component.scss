@@ -1,0 +1,25 @@
+:host {
+    ::ng-deep {
+        .main-container {
+            max-width: 50%;
+        }
+    }
+    .confirm-wrapper {
+        min-width: 400px;
+        .modal-body {
+            padding: 30px 20px 10px;
+            h3 {
+                font-size: 1.1em;
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+        .modal-footer {
+            padding: 10px;
+            text-align: right;
+            .btns ng-button {
+                margin: 0 6px;
+            }
+        }
+    }
+}

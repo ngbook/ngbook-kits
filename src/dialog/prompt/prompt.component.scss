@@ -1,0 +1,38 @@
+:host {
+    ::ng-deep {
+        .main-container {
+            max-width: 50%;
+        }
+    }
+    .prompt-wrapper {
+        min-width: 400px;
+        .modal-body {
+            padding: 30px 20px 10px;
+            h3 {
+                font-size: 1.1em;
+                font-weight: bold;
+                margin: 0;
+            }
+            .value-input {
+                margin: 10px;
+                border-radius: 4px;
+                -webkit-appearance: none;
+                outline: none;
+                border: 1px solid #ccc;
+                width: 70%;
+                line-height: 28px;
+                height: 28px;
+                padding: 0 10px;
+                font-size: 14px;
+                color: #555;
+            }
+        }
+        .modal-footer {
+            padding: 10px;
+            text-align: right;
+            .btns ng-button {
+                margin: 0 6px;
+            }
+        }
+    }
+}

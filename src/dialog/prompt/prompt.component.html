@@ -1,0 +1,21 @@
+<ng-modal *ngIf="data" [isOpen]="data?.isOpen"
+    [overlayClosable]="data?.overlayClosable"
+    [boxStyle]="data?.baseStyle">
+    <div class="prompt-wrapper">
+        <div class="modal-body">
+            <h3>{{data.content}}</h3>
+            <input type="text" class="value-input"
+                [(ngModel)]="data.value"/>
+        </div>
+        <div class="modal-footer">
+            <div class="btns">
+                <ng-button (click)="onClose($event)">
+                    {{data.closeTxt}}
+                </ng-button>
+                <ng-button (click)="onSure($event)">
+                    {{data.sureTxt}}
+                </ng-button>
+            </div>
+        </div>
+    </div>
+</ng-modal>

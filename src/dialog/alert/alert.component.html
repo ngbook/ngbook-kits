@@ -1,0 +1,20 @@
+
+<ng-modal *ngIf="data" [isOpen]="data?.isOpen"
+    [overlayClosable]="data?.overlayClosable"
+    [boxStyle]="data?.baseStyle">
+    <div class="alert-wrapper">
+        <div class="modal-header">
+            <strong>{{data.title}}</strong>
+        </div>
+        <div class="modal-body">
+            <p class="desc">{{data.content}}</p>
+        </div>
+        <div class="modal-footer">
+            <div class="btns">
+                <ng-button (click)="onSure($event)">
+                    {{data.sureTxt}}
+                </ng-button>
+            </div>
+        </div>
+    </div>
+</ng-modal>

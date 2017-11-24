@@ -1,6 +1,6 @@
 {
     "name": "ngbook-kits",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "ngbook相关示例代码",
     "main": "index.js",
     "scripts": {

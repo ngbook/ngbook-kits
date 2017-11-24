@@ -1,0 +1,30 @@
+:host {
+    ::ng-deep {
+        .main-container {
+            max-width: 50%;
+        }
+    }
+    .alert-wrapper {
+        min-width: 300px;
+        .modal-header {
+            padding: 8px 10px;
+            text-align: left;
+            font-size: 14px;
+            color: #777;
+            border-bottom: 1px solid #eee;
+        }
+        .modal-body {
+            padding: 20px;
+            p.desc {
+                font-size: 16px;
+                color: #555;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+        .modal-footer {
+            padding: 10px;
+            text-align: right;
+        }
+    }
+}
