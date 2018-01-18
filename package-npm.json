@@ -1,6 +1,6 @@
 {
     "name": "ngbook-kits",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "ngbook相关示例代码",
     "main": "index.js",
     "scripts": {
@@ -11,7 +11,8 @@
         "ng5",
         "component"
     ],
-    "devDependencies": {
+    "dependencies": {
+        "@angular/cdk": "^5.1.0",
         "rxjs": "^5.5.2"
     },
     "author": "ngbook",
