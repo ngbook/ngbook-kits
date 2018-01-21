@@ -1,7 +1,7 @@
 
 import {
     Component, AfterViewInit, Input, Inject,
-    EventEmitter, ViewChild, ElementRef, OnDestroy,
+    EventEmitter, OnDestroy,
 } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
@@ -27,27 +27,9 @@ export class ConfirmData extends DialogModelBase {
   templateUrl: './confirm.component.html',
   styleUrls: ['./confirm.component.scss'],
 })
-export class NgConfirmComponent implements AfterViewInit {
-    @ViewChild('closeBtn', {read: ElementRef})
-    closeBtn: ElementRef;
-    @ViewChild('sureBtn', {read: ElementRef})
-    sureBtn: ElementRef;
-
+export class NgConfirmComponent implements OnDestroy {
     constructor(public data: ConfirmData) { }
 
-    ngAfterViewInit() {
-        const closeObserve = Observable.fromEvent(
-            this.closeBtn.nativeElement, 'click').subscribe(() => {
-                this.data.choice.next(false);
-            });
-        const sureObserve = Observable.fromEvent(
-            this.sureBtn.nativeElement, 'click').subscribe(() => {
-                this.data.choice.next(true);
-            });
-        this.data.choice.subscribe((result) => {
-            console.log('-->', result);
-        });
-    }
     ngOnDestroy() {
         this.data.choice.unsubscribe();
     }
@@ -55,10 +37,12 @@ export class NgConfirmComponent implements AfterViewInit {
         if (this.data.closeOnSure) {
             this.data.isOpen = false;
         }
+        this.data.choice.next(true);
         this.data.sure.emit(event);
     }
     public onClose(event) {
         this.data.isOpen = false;
+        this.data.choice.next(false);
         this.data.close.emit(event);
     }
 }
