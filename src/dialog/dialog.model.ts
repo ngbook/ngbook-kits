@@ -36,7 +36,7 @@ export class DialogData<T> {
         }
         this.data[key] = value;
     }
-    public getProperty(key): any {
+    public getProperty<T>(key): T {
         if (!key) {
             return null;
         }
