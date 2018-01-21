@@ -18,6 +18,12 @@ import { NgConfirmComponent, ConfirmData } from './confirm/confirm.component';
 import { NgPromptComponent, PromptData } from './prompt/prompt.component';
 import { DialogData, DialogModelBase } from './dialog.model';
 
+/**
+ * 具体方法里的 opts 选项决定于 DialogModelBase 里的 validFields
+ * 基本的有：'isOpen', 'overlayClosable', 'width',
+ *      'height', 'sureTxt', 'minWidth'
+ * 另外每个弹框里还有各自额外的属性，如comfirm 框有 closeTxt 等
+ */
 @Injectable()
 export class DialogService {
     // private modalVector = [] as Array<DialogData<any>>;

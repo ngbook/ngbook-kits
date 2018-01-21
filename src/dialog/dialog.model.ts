@@ -36,6 +36,12 @@ export class DialogData<T> {
         }
         this.data[key] = value;
     }
+    public getProperty(key): any {
+        if (!key) {
+            return null;
+        }
+        return this.data[key];
+    }
 }
 
 export abstract class DialogModelBase {
