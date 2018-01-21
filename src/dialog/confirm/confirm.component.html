@@ -8,10 +8,10 @@
     </div>
     <div class="modal-footer">
         <div class="btns">
-            <ng-button (click)="onClose($event)">
+            <ng-button (click)="onClose($event)" #closeBtn>
                 {{data.closeTxt}}
             </ng-button>
-            <ng-button (click)="onSure($event)">
+            <ng-button (click)="onSure($event)" #sureBtn>
                 {{data.sureTxt}}
             </ng-button>
         </div>

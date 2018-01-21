@@ -12,7 +12,7 @@ export class DialogData<T> {
 
     constructor(private portal: ComponentPortal<T>,
         public host: DomPortalHost,
-        private data: DialogModelBase) {
+        public data: DialogModelBase) {
     }
 
     public open() {
